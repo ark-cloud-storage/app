@@ -21,7 +21,7 @@ module.exports = {
         [
             "@codedependant/semantic-release-docker",
             {
-                dockerImage: "api",
+                dockerImage: "app",
                 dockerProject: "arkcloudstorage",
             },
         ],
