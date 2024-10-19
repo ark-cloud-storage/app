@@ -1,0 +1,24 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 20px;
+
+    h1 {
+        font-size: 250%;
+    }
+
+    h2 {
+        font-size: 200%;
+    }
+
+    p {
+        font-size: 150%;
+    }
+
+    a {
+        color: var(--mat-text-button-state-layer-color);
+    }
+}

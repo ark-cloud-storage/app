@@ -1,0 +1,38 @@
+.form-card {
+    margin: 10px;
+    padding: 10px;
+    width: calc(100% - 20px);
+    max-width: 1000px;
+    justify-self: center;
+}
+
+.form-row {
+    width: 100%;
+    display: flex;
+}
+
+.form-header {
+    padding-bottom: 20px;
+}
+
+.form-button {
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.form-field {
+    width: 100%;
+}
+
+.form-divider {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.config-textarea {
+    resize: none;
+}
+
+.icon-button {
+    cursor: pointer;
+}
