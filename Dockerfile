@@ -11,6 +11,7 @@ WORKDIR /home/node
 COPY --chown=node:node package.json ./
 RUN npm install
 
+COPY --chown=node:node ./public ./public
 COPY --chown=node:node ./src ./src
 COPY --chown=node:node ./tsconfig.json ./tsconfig.json
 COPY --chown=node:node ./tsconfig.app.json ./tsconfig.app.json
