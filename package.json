@@ -10,7 +10,7 @@
         "build": "ng build",
         "build:dev": "ng build --watch --configuration development",
         "lint": "ng lint",
-        "test": "ng test",
+        "test": "ng test --no-watch",
         "deploy": "semantic-release",
         "prepare": "husky"
     },
