@@ -9,5 +9,12 @@ body {
     background-color: var(--mat-bottom-sheet-container-background-color);
 }
 
-$my-typography: mat.m2-define-typography-config($font-family: '"ARK", "sans-serif"');
+@font-face {
+    font-family: 'ark';
+    src: url('/ARK-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+$my-typography: mat.m2-define-typography-config($font-family: '"ark", "sans-serif"');
 @include mat.all-component-typographies($my-typography);
