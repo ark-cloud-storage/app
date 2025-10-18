@@ -1,4 +1,4 @@
-import { Injectable } from "@angular/core";
+import { inject, Injectable } from "@angular/core";
 import { RegisterRequestDto } from "./dto/register.request.dto";
 import { RegisterResponseDto } from "./dto/register.response.dto";
 import { HttpClient } from "@angular/common/http";
@@ -9,7 +9,7 @@ import { environment } from "../environments/environment";
     providedIn: "root",
 })
 export class ApiService {
-    constructor(private readonly httpClient: HttpClient) {}
+    private readonly httpClient = inject(HttpClient);
 
     public async register(
         request: RegisterRequestDto,

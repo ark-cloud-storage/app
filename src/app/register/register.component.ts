@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, inject } from "@angular/core";
 import {
     MatFormField,
     MatLabel,
@@ -24,20 +24,20 @@ import { CdkTextareaAutosize } from "@angular/cdk/text-field";
 @Component({
     selector: "app-register",
     imports: [
-    MatIcon,
-    MatFormField,
-    MatInput,
-    MatLabel,
-    MatCard,
-    MatCardContent,
-    MatCardHeader,
-    MatCardTitle,
-    MatButton,
-    MatDivider,
-    MatSuffix,
-    FormsModule,
-    CdkTextareaAutosize
-],
+        MatIcon,
+        MatFormField,
+        MatInput,
+        MatLabel,
+        MatCard,
+        MatCardContent,
+        MatCardHeader,
+        MatCardTitle,
+        MatButton,
+        MatDivider,
+        MatSuffix,
+        FormsModule,
+        CdkTextareaAutosize,
+    ],
     templateUrl: "./register.component.html",
     styleUrl: "./register.component.scss",
 })
@@ -46,10 +46,8 @@ export class RegisterComponent {
     protected clusterId: string = "";
     protected config: string = "";
 
-    public constructor(
-        private readonly apiService: ApiService,
-        private readonly matSnackBar: MatSnackBar,
-    ) {}
+    private readonly apiService = inject(ApiService);
+    private readonly matSnackBar = inject(MatSnackBar);
 
     protected canRegister(): boolean {
         return !this.registered && this.clusterId.length > 0;
