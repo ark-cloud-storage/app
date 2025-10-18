@@ -9,7 +9,6 @@ import {
     MatCard,
     MatCardContent,
     MatCardHeader,
-    MatCardSubtitle,
     MatCardTitle,
 } from "@angular/material/card";
 import { MatButton } from "@angular/material/button";
@@ -24,7 +23,6 @@ import { CdkTextareaAutosize } from "@angular/cdk/text-field";
 
 @Component({
     selector: "app-register",
-    standalone: true,
     imports: [
         MatIcon,
         MatFormField,
@@ -34,7 +32,6 @@ import { CdkTextareaAutosize } from "@angular/cdk/text-field";
         MatCardContent,
         MatCardHeader,
         MatCardTitle,
-        MatCardSubtitle,
         MatButton,
         MatDivider,
         MatSuffix,
