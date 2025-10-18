@@ -1,26 +1,30 @@
 <mat-card class="form-card" appearance="outlined">
-    <mat-card-header class="form-header">
-        <mat-card-title>Register</mat-card-title>
-    </mat-card-header>
-    <mat-card-content>
-        <div class="form-row">
-            <mat-form-field class="form-field" floatLabel="auto">
-                <mat-label>Cluster ID</mat-label>
-                <input matInput [(ngModel)]="clusterId" [disabled]="registered" >
-            </mat-form-field>
-        </div>
-        <div class="form-row">
-            <button mat-flat-button class="form-button" [disabled]="!canRegister()" (click)="register()">
-                <span>Register</span>
-            </button>
-        </div>
-        <mat-divider class="form-divider" *ngIf="registered"></mat-divider>
-        <div class="form-row" *ngIf="registered">
-            <mat-form-field class="form-field">
-                <mat-label>GameUserSettings.ini</mat-label>
-                <textarea matInput cdkTextareaAutosize class="config-textarea" [value]="config" readonly></textarea>
-                <mat-icon matSuffix (click)="copyConfig()" class="icon-button">content_copy</mat-icon>
-            </mat-form-field>
-        </div>
-    </mat-card-content>
+  <mat-card-header class="form-header">
+    <mat-card-title>Register</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <div class="form-row">
+      <mat-form-field class="form-field" floatLabel="auto">
+        <mat-label>Cluster ID</mat-label>
+        <input matInput [(ngModel)]="clusterId" [disabled]="registered" >
+      </mat-form-field>
+    </div>
+    <div class="form-row">
+      <button mat-flat-button class="form-button" [disabled]="!canRegister()" (click)="register()">
+        <span>Register</span>
+      </button>
+    </div>
+    @if (registered) {
+      <mat-divider class="form-divider"></mat-divider>
+    }
+    @if (registered) {
+      <div class="form-row">
+        <mat-form-field class="form-field">
+          <mat-label>GameUserSettings.ini</mat-label>
+          <textarea matInput cdkTextareaAutosize class="config-textarea" [value]="config" readonly></textarea>
+          <mat-icon matSuffix (click)="copyConfig()" class="icon-button">content_copy</mat-icon>
+        </mat-form-field>
+      </div>
+    }
+  </mat-card-content>
 </mat-card>

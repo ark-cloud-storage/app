@@ -14,7 +14,7 @@ import {
 import { MatButton } from "@angular/material/button";
 import { MatIcon } from "@angular/material/icon";
 import { MatDivider } from "@angular/material/divider";
-import { NgIf } from "@angular/common";
+
 import { FormsModule } from "@angular/forms";
 import { MatSnackBar } from "@angular/material/snack-bar";
 import { ApiService } from "../api.service";
@@ -24,21 +24,20 @@ import { CdkTextareaAutosize } from "@angular/cdk/text-field";
 @Component({
     selector: "app-register",
     imports: [
-        MatIcon,
-        MatFormField,
-        MatInput,
-        MatLabel,
-        MatCard,
-        MatCardContent,
-        MatCardHeader,
-        MatCardTitle,
-        MatButton,
-        MatDivider,
-        MatSuffix,
-        NgIf,
-        FormsModule,
-        CdkTextareaAutosize,
-    ],
+    MatIcon,
+    MatFormField,
+    MatInput,
+    MatLabel,
+    MatCard,
+    MatCardContent,
+    MatCardHeader,
+    MatCardTitle,
+    MatButton,
+    MatDivider,
+    MatSuffix,
+    FormsModule,
+    CdkTextareaAutosize
+],
     templateUrl: "./register.component.html",
     styleUrl: "./register.component.scss",
 })
