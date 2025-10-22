@@ -11,4 +11,9 @@ updates:
         applies-to: version-updates
         patterns:
           - "@angular*"
+      eslint:
+        applies-to: version-updates
+        patterns:
+          - "eslint*"
+          - "@*eslint*"
   
