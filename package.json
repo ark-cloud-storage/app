@@ -55,7 +55,7 @@
         "eslint-config-prettier": "~10.1.8",
         "eslint-plugin-prettier": "~5.5.4",
         "husky": "~9.1.7",
-        "jasmine-core": "~5.12.1",
+        "jasmine-core": "~5.13.0",
         "karma": "~6.4.4",
         "karma-chrome-launcher": "~3.2.0",
         "karma-coverage": "~2.2.1",
