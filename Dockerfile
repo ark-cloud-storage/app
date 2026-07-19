@@ -8,7 +8,7 @@ ENV NODE_ENV=build
 USER node
 WORKDIR /home/node
 
-COPY --chown=node:node package.json ./
+COPY --chown=node:node package.json package-lock.json ./
 RUN npm clean-install
 
 COPY --chown=node:node ./public ./public
