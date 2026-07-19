@@ -1,6 +1,7 @@
 import { Component, inject } from "@angular/core";
 import {
     MatFormField,
+    MatHint,
     MatLabel,
     MatSuffix,
 } from "@angular/material/form-field";
@@ -37,6 +38,7 @@ import { CdkTextareaAutosize } from "@angular/cdk/text-field";
         MatSuffix,
         FormsModule,
         CdkTextareaAutosize,
+        MatHint,
     ],
     templateUrl: "./register.component.html",
     styleUrl: "./register.component.scss",
