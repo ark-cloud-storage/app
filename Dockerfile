@@ -9,7 +9,7 @@ USER node
 WORKDIR /home/node
 
 COPY --chown=node:node package.json ./
-RUN npm install
+RUN npm clean-install
 
 COPY --chown=node:node ./public ./public
 COPY --chown=node:node ./src ./src
