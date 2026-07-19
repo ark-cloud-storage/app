@@ -6,7 +6,8 @@
     <div class="form-row">
       <mat-form-field class="form-field" floatLabel="auto">
         <mat-label>Cluster ID</mat-label>
-        <input matInput [(ngModel)]="clusterId" [disabled]="registered" >
+        <input matInput [(ngModel)]="clusterId" [disabled]="registered" />
+        <mat-hint>Any unique ID for your cluster. (Does not need to match your Cross-Travel Cluster-Id, but it can)</mat-hint>
       </mat-form-field>
     </div>
     <div class="form-row">
@@ -23,6 +24,7 @@
           <mat-label>GameUserSettings.ini</mat-label>
           <textarea matInput cdkTextareaAutosize class="config-textarea" [value]="config" readonly></textarea>
           <mat-icon matSuffix (click)="copyConfig()" class="icon-button">content_copy</mat-icon>
+          <mat-hint>Keep the secret secure</mat-hint>
         </mat-form-field>
       </div>
     }
